@@ -118,7 +118,7 @@ a {
 
 #content {
     display: grid;
-    gap: var(--spacer-vw-padding);
+    
 }
 
 
@@ -148,6 +148,10 @@ pre.debug {
         --base-size: calc(var(--base-amount) / 5);
 
     }
+    #content {
+
+    gap: var(--spacer-vw-padding);
+}
 }
 
 

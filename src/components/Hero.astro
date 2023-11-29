@@ -56,11 +56,14 @@ import CompTicker from "./CompTicker.astro";
     border-left: var(--border-width) solid var(--text);
     padding: 0 calc(var(--spacer-vw-padding) / 2);
   }
+  ul {
+    padding: calc(0.5 * var(--spacer-vw-gap)) 0 var(--spacer-vw-gap) 0;
+  }
 
   li,
   li a {
     font-family: var(--font-body);
-    font-size: var(--text-sm);
+    font-size: calc(0.75 * var(--text-sm));
     font-weight: 600;
     line-height: 1.25;
   }
@@ -73,6 +76,15 @@ import CompTicker from "./CompTicker.astro";
       gap: var(--spacer-vw-gap);
       padding: var(--spacer-vw-margin);
       padding-bottom: 0;
+    }
+    ul {
+      padding: calc(0.5 * var(--spacer-vw-gap)) 0
+        calc(1.5 * var(--spacer-vw-gap)) 0;
+    }
+
+    li,
+    li a {
+      font-size: var(--text-sm);
     }
   }
   /* 
