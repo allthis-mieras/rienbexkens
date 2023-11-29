@@ -1,0 +1,99 @@
+---
+const { ticker } = Astro.props;
+---
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <h1 class="ticker__item">{ticker}</h1>
+    <h1 class="ticker__item">{ticker}</h1>
+    <h1 class="ticker__item">{ticker}</h1>
+  </div>
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    /* Colors */
+    --duration: 60s;
+    --ticker-font: clamp(20rem, 7.5862rem + 50.9284vw, 32rem);
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: var(--ticker-font);
+    line-height: 80%;
+    font-weight: 900;
+  }
+
+  @-webkit-keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  .ticker-wrap {
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    padding-left: 100%;
+    box-sizing: content-box;
+    display: inline-block;
+  }
+
+  .ticker {
+    display: inline-block;
+    /* height: 4rem; */
+    line-height: 1;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: var(--duration);
+    animation-duration: var(--duration);
+  }
+
+  .ticker__item {
+    display: inline-block;
+    padding: 0 calc(var(--ticker-font) / 10);
+    letter-spacing: -0.25vw;
+  }
+
+  @media screen and (min-width: 600px) {
+    :root {
+      /* Colors */
+
+      --ticker-font: clamp(32rem, 14.8571rem + 32.7143vw, 64rem);
+    }
+  }
+</style>

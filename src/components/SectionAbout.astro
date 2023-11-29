@@ -1,0 +1,139 @@
+<section>
+  <div class="media-wrapper ar34">
+    <!-- add swiper.js -->
+    <img class="" src="rien-bexkens-marwan-01.png" alt="" />
+  </div>
+  <div class="content">
+    <div class="content-bio">
+      <p class="lead">
+        Rien Bexkens, also known as Rini Tortellini, is a versatile filmmaker
+        specializing in directing fictional films, documentaries, music videos,
+        commercials, and innovative crossovers. Working with a diverse
+        clientele, including artists, brands, and individuals dedicated to
+        positive change, Rien's personal projects tackle societal issues and
+        shed light on the stories of underrepresented voices.
+      </p>
+      <p>
+        With a keen eye for aesthetics and cinematography, Rien Bexkens excels
+        as a director, often weaving visuals inspired by hip-hop and street
+        culture into his work. Despite the bold imagery, his storytelling
+        remains deeply human, capturing the authentic lives of his subjects. In
+        contrast, his fictional productions draw influence from cult films,
+        French New Wave, absurdism, and humor noir.
+      </p>
+      <p>
+        Rien's interests span a broad spectrum, encompassing culture(s), travel,
+        sports, entrepreneurship, and social engagement initiatives. Growing up,
+        he experienced a sense of displacement, finding solace in street
+        culture. Living in a multicultural city like Rotterdam exposed him to
+        social deprivation and injustice, sparking a commitment to uncover
+        overlooked realities. His privilege as a white male drives him to share
+        his personal story and amplify the voices of those often unheard.
+      </p>
+    </div>
+    <div class="details">
+      <div class="contact">
+        <h3 class="heading">Contact</h3>
+        <ul>
+          <li>
+            <a href="mailto:shoot@rienbexkens.com" class="link"
+              >shoot@rienbexkens.com</a
+            >
+          </li>
+          <li>
+            <a href="tel://+31639639578" class="link">+31 (0) 6 39639578</a>
+          </li>
+        </ul>
+      </div>
+      <div class="office">
+        <h3 class="heading">Office</h3>
+        <ul>
+          <li><a href="#" class="link">Westersingel 97</a></li>
+          <li>3015 LC, Rotterdam</li>
+          <li>The Netherlands</li>
+        </ul>
+      </div>
+      <div class="social">
+        <h3 class="heading">Social</h3>
+        <ul>
+          <li><a href="#" class="link">Vimeo</a></li>
+          <li><a href="#" class="link">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    gap: var(--spacer-vw-gap);
+    padding-bottom: 10vh;
+  }
+  section * {
+    width: 100%;
+  }
+  .media-wrapper {
+    background: var(--text);
+  }
+
+  .media-wrapper img {
+    mix-blend-mode: multiply;
+    object-fit: cover;
+  }
+
+  .content {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: var(--spacer-vw-gap) / 2;
+    padding: 0 var(--spacer-vw-margin);
+  }
+
+  li,
+  li a {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 120%;
+  }
+
+  p.lead {
+    font-size: var(--text-base);
+    text-wrap: balance;
+  }
+
+  p {
+    margin-bottom: var(--spacer-vw-gap);
+    font-size: var(--text-sm);
+    line-height: 120%;
+  }
+
+  p span {
+    font-size: calc(0.8 * var(--text-sm));
+    font-weight: 500;
+  }
+
+  .details {
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: calc(var(--spacer-vw-gap) / 2);
+  }
+
+  .heading {
+    border-bottom: var(--border-width) solid var(--text);
+    padding: calc(var(--spacer-vw-gap) / 4) 0;
+    margin-bottom: calc(var(--spacer-vw-gap) / 4);
+  }
+
+  @media (min-width: 768px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 var(--spacer-vw-margin);
+    }
+
+    .content {
+      padding: 0;
+    }
+  }
+</style>

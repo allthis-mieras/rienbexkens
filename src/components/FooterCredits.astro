@@ -1,0 +1,17 @@
+---
+const { client } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<!-- <pre class="debug">FooterCredits.astro</pre> -->
+<div class="credits grid">
+  <p>&copy; {currentYear} {client}</p>
+  <p>website by <a href="https://allthis.digital">allthis.digital</a>.</p>
+</div>
+
+<style>
+  .credits {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

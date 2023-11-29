@@ -1,0 +1,115 @@
+<input id="color-mode" type="checkbox" name="color-mode" />
+<label for="color-mode" class="bottom-vw-8 left-vw-8">
+  <span class="dark-mode-hide">Dark Mode</span>
+  <span class="light-mode-hide">Light Mode</span>
+</label>
+
+<style is:global>
+  :root {
+    --bg: var(--bg);
+    --text: var(--text);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: var(--clr-yellow);
+      --text: var(--clr-purple);
+    }
+  }
+
+  #color-mode,
+  label {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+  }
+
+  #color-mode:checked ~ * {
+    --bg: var(--clr-purple);
+    --text: var(--clr-yellow);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #color-mode:checked ~ * {
+      --bg: var(--clr-purple);
+      --text: var(--clr-yellow);
+    }
+  }
+
+  .light-mode-hide {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .dark-mode-hide {
+      display: none;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .light-mode-hide {
+      display: initial;
+    }
+  }
+
+  label {
+    scale: 0.5;
+    cursor: pointer;
+    position: fixed;
+    background: var(--text);
+    color: var(--bg);
+    padding: 0.875rem 1rem;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    font-size: var(--text-sm);
+    /* box-shadow:
+      0 2px var(--bg),
+      0 4px var(--text); */
+    user-select: none;
+    z-index: 100;
+  }
+
+  input[type="checkbox"]:focus + label {
+    outline: 2px dashed var(--text);
+    outline-offset: 4px;
+  }
+
+  label:active {
+    transform: translateY(1px);
+    box-shadow:
+      0 1px var(--bg),
+      0 3px var(--text);
+  }
+
+  label:after {
+    content: "✔\FE0E";
+    height: auto;
+    width: auto;
+    margin-left: 1rem;
+    border: solid 2px var(--bg);
+    text-align: center;
+    border-radius: 4px;
+    color: transparent;
+  }
+
+  #color-mode:checked + label:after {
+    color: var(--bg);
+  }
+
+  input[type="checkbox"] {
+    opacity: 0.00001;
+    position: absolute;
+  }
+
+  .color-scheme-wrapper {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    transition: background var(--theme-transition);
+    transition: color var(--theme-transition);
+  }
+</style>

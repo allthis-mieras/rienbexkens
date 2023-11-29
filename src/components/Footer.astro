@@ -1,0 +1,50 @@
+---
+const { kvk, iban, btw, terms } = Astro.props;
+import FooterCredits from "./FooterCredits.astro";
+---
+
+<footer>
+  <h1>Rien Bexkens</h1>
+  <div class="footer-bottom">
+    <FooterCredits client="Rien Bexkens" />
+    <div class="socials">
+      <a class="vimeo" href="#"></a>
+      <a class="instagram" href="#"></a>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Jeffrey de Roode",
+    "url": "https://jeffreyderoode.nl/",
+    "address": "Goudsesingel 136",
+    "sameAs": [
+      "https://www.facebook.com/jeffrey.manuel.334",
+      "https://www.linkedin.com/in/jeffrey-de-roode-857575139/",
+      "https://www.instagram.com/jeffreyderoode/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Goudsesingel 136",
+      "addressRegion": "ZH",
+      "postalCode": "3011 KD",
+      "addressLocality": "Rotterdam",
+      "addressCountry": "NL"
+    }
+  }
+</script>
+
+<style>
+  .footer-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacer-vw-padding);
+    background: var(--bg);
+    border-top: var(--border-width) solid var(--text);
+  }
+</style>
