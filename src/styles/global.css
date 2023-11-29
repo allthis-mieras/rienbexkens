@@ -21,7 +21,8 @@
 	--font-heading: 'neue-haas-grotesk-display', var(--font-system);
 
 	/* Text Sizes */
-	--text-sm: clamp(0.675rem, 0.675rem + 0.25vw, 0.875rem);
+	--text-xs: clamp(0.475rem, 0.475rem + 0.15vw, 0.675rem);
+    --text-sm: clamp(0.675rem, 0.675rem + 0.15vw, 0.875rem);
 	--text-base: clamp(1rem, 1rem + 1vw, 1.5rem);
 	--text-md: 1.125rem;
 	--text-lg: 1.25rem;
@@ -29,7 +30,7 @@
 	--text-2xl: 2.125rem;
 	--text-3xl: 2.625rem;
 	--text-4xl: 3.5rem;
-	--text-5xl: 4.5rem;
+	--text-5xl: clamp(8rem, 8rem + 12vw, 16rem);
 
     /* Space */
     --space-base: 1rem;

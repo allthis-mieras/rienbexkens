@@ -1,5 +1,5 @@
 <section>
-  <div class="media-wrapper ar34">
+  <div class="media-wrapper">
     <!-- add swiper.js -->
     <img class="" src="rien-bexkens-marwan-01.png" alt="" />
   </div>
@@ -75,17 +75,20 @@
   }
   .media-wrapper {
     background: var(--text);
+    /* position: sticky; */
+    /* top: 0; */
   }
 
   .media-wrapper img {
     mix-blend-mode: var(--theme-blend);
     object-fit: cover;
+    aspect-ratio: 1/1;
   }
 
   .content {
     display: grid;
     grid-auto-rows: min-content;
-    gap: var(--spacer-vw-gap) / 2;
+    gap: var(--spacer-vw-gap);
     padding: 0 var(--spacer-vw-margin);
   }
 
@@ -94,7 +97,7 @@
     font-size: var(--text-sm);
     font-weight: 500;
     text-decoration: none;
-    line-height: 120%;
+    line-height: 133%;
   }
 
   p.lead {
@@ -107,13 +110,9 @@
     font-family: var(--font-body);
     margin-bottom: var(--spacer-vw-gap);
     font-size: var(--text-sm);
-    /* font-weight: 500; */
-    line-height: 120%;
-  }
-
-  p span {
-    font-size: calc(0.8 * var(--text-sm));
     font-weight: 500;
+    line-height: 133%;
+    text-wrap: balance;
   }
 
   .details {
@@ -133,6 +132,21 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin: 0 var(--spacer-vw-margin);
+    }
+
+    .media-wrapper {
+      background: var(--text);
+      position: sticky;
+      top: 0;
+    }
+
+    .media-wrapper img {
+      mix-blend-mode: var(--theme-blend);
+      object-fit: cover;
+      height: 100%;
+    }
+    .details {
+      gap: calc(var(--spacer-vw-gap));
     }
 
     .content {

@@ -48,7 +48,7 @@ import CompTicker from "./CompTicker.astro";
 
   .details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0 var(--spacer-vw-gap);
     padding: 0 var(--spacer-vw-margin);
   }
@@ -63,7 +63,7 @@ import CompTicker from "./CompTicker.astro";
   li,
   li a {
     font-family: var(--font-body);
-    font-size: calc(0.75 * var(--text-sm));
+    font-size: var(--text-sm);
     font-weight: 600;
     line-height: 1.25;
   }

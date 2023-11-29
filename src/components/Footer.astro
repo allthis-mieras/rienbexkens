@@ -4,7 +4,10 @@ import FooterCredits from "./FooterCredits.astro";
 ---
 
 <footer>
-  <h1>Rien Bexkens</h1>
+  <div class="footer-top">
+    <h6>Rini<br />Tortellni</h6>
+  </div>
+
   <div class="footer-bottom">
     <FooterCredits client="Rien Bexkens" />
     <div class="socials">
@@ -38,13 +41,51 @@ import FooterCredits from "./FooterCredits.astro";
 </script>
 
 <style>
+  footer {
+    overflow: hidden;
+  }
+  h6 {
+    font-family: var(--font-heading);
+    font-size: var(--text-5xl);
+    line-height: 0.8;
+    font-weight: 800;
+    letter-spacing: -0.05vw;
+  }
+
+  .footer-top {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-top:before,
+  .footer-top:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 2;
+  }
+
+  .footer-top:before {
+    bottom: 0;
+    background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+  }
+
+  /* .footer-top:after {
+    bottom: 0;
+    background: linear-gradient(to bottom, #333 0%, transparent 100%);
+  } */
   .footer-bottom {
     position: fixed;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     right: 0;
     padding: calc(0.5 * var(--spacer-vw-padding)) var(--spacer-vw-padding);
     background: var(--bg);
     border-top: var(--border-width) solid var(--text);
+    z-index: 10;
   }
 </style>
