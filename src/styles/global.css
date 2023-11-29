@@ -45,7 +45,7 @@
     --spacer-vw-padding: clamp(1rem, -1.5rem + 4vw, 2rem);
     --spacer-vw-margin: clamp(1rem, -1.5rem + 4vw, 2rem);
 
-    --border-width: clamp(0.0625rem, 0.0446rem + 0.0893vw, 0.125rem);
+    --border-width: clamp(2px, 0.0446rem + 0.0893vw, 0.125rem);
     /* --spacer-y-vw-full: calc(-1 * var(--spacer-margin-vw)); */
     
 
