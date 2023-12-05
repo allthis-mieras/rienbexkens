@@ -13,9 +13,9 @@
 	--theme-bg: var(--clr-yellow);
 	--theme-text: var(--clr-purple);
 
-	--media-blend: normal;
-	--img-mix-blend: screen;
-	--img-clr-overlay: var(--clr-purple);
+	--media-blend: multiply;
+	--img-mix-blend: none;
+	--img-clr-overlay: var(--theme-text);
 	--img-clr-mix: color;
 
 	--gradient-blend: multiply;
