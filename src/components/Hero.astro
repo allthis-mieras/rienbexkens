@@ -1,10 +1,10 @@
 ---
-import CompTicker from './CompTicker.astro';
+import Marquee from './Marquee.astro'
 ---
 
 <!-- <pre class="debug">Hero.astro</pre> -->
 <header>
-	<CompTicker ticker="Rien Bexkens" />
+	<Marquee text="Rien Bexkens" />
 	<div class="details">
 		<div>
 			<h2>a.k.a Rini Tortellini</h2>
@@ -72,7 +72,6 @@ import CompTicker from './CompTicker.astro';
 		.details {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
-
 			gap: var(--spacer-vw-gap);
 			padding: var(--spacer-vw-margin);
 			padding-bottom: 0;
@@ -83,7 +82,7 @@ import CompTicker from './CompTicker.astro';
 
 		li,
 		li a {
-			font-size: var(--font-size-sm);
+			font-size: var(--font-size-xs);
 		}
 	}
 	/* 

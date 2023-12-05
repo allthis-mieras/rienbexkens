@@ -1,0 +1,83 @@
+---
+const { text } = Astro.props
+---
+
+<div class="marquee-wrap">
+	<div class="marquee">
+		<h1 class="marquee__item">{text}</h1>
+		<h1 class="marquee__item">{text}</h1>
+		<h1 class="marquee__item">{text}</h1>
+		<h1 class="marquee__item">{text}</h1>
+	</div>
+</div>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	:root {
+		/* Colors */
+		--duration: 60s;
+		--marquee-font: clamp(16rem, 12rem + 40vw, 32rem);
+	}
+
+	h1 {
+		font-family: var(--font-heading);
+		font-size: var(--marquee-font);
+		line-height: 80%;
+		font-weight: 900;
+	}
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(0%);
+		}
+
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	.marquee-wrap {
+		/* position: fixed; */
+		/* bottom: 0; */
+		width: 100%;
+		overflow: hidden;
+		height: auto;
+		padding-left: 100%;
+		box-sizing: content-box;
+		display: inline-block;
+	}
+
+	.marquee {
+		display: inline-block;
+		/* height: 4rem; */
+		line-height: 1;
+		white-space: nowrap;
+		padding-right: 100%;
+		box-sizing: content-box;
+
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+		-webkit-animation-name: marquee;
+		animation-name: marquee;
+		-webkit-animation-duration: var(--duration);
+		animation-duration: var(--duration);
+	}
+
+	.marquee__item {
+		display: inline-block;
+		padding: 0 calc(var(--marquee-font) / 10);
+		letter-spacing: -0.55vw;
+	}
+
+	@media screen and (min-width: 600px) {
+		:root {
+			--marquee-font: calc(clamp(20rem, 21.43vw + 15.71rem - 20vh, 50rem));
+			/* https://www.fluid-type-scale.com/calculate?minFontSize=320&minWidth=320&minRatio=8&maxFontSize=800&maxWidth=2560&maxRatio=12&steps=marquee&baseStep=marquee&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1920 */
+		}
+	}
+</style>
