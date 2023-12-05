@@ -91,7 +91,8 @@ const { ticker } = Astro.props;
 
 	@media screen and (min-width: 600px) {
 		:root {
-			--ticker-font: clamp(16rem, 6rem + 25vw, 52rem);
+			--ticker-font: calc(clamp(20rem, 21.43vw + 15.71rem - 20vh, 50rem));
+			/* https://www.fluid-type-scale.com/calculate?minFontSize=320&minWidth=320&minRatio=8&maxFontSize=800&maxWidth=2560&maxRatio=12&steps=ticker&baseStep=ticker&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1920 */
 		}
 	}
 </style>

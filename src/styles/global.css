@@ -28,16 +28,16 @@
   --font-heading: neue-haas-grotesk-display, var(--font-system);
 
   /* Text Sizes */
-  --theme-text-xs: clamp(0.475rem, 0.475rem + 0.15vw, 0.675rem);
-  --theme-text-sm: clamp(0.675rem, 0.575rem + 0.5vw, 1rem);
-  --theme-text-base: clamp(1rem, 1rem + 1vw, 2rem);
-  --theme-text-md: 1.125rem;
-  --theme-text-lg: 1.25rem;
-  --theme-text-xl: 1.625rem;
-  --theme-text-2xl: 2.125rem;
-  --theme-text-3xl: 2.625rem;
-  --theme-text-4xl: 3.5rem;
-  --theme-text-5xl: clamp(8rem, 8rem + 12vw, 16rem);
+  --font-size-xs: clamp(0.64rem, 0.51vw + 0.51rem, 1.13rem);
+  --font-size-sm: clamp(0.8rem, 0.74vw + 0.62rem, 1.5rem);
+  --font-size-base: clamp(1rem, 1.05vw + 0.74rem, 2rem);
+  --font-size-md: clamp(1.25rem, 1.49vw + 0.88rem, 2.67rem);
+  --font-size-lg: clamp(1.56rem, 2.1vw + 1.04rem, 3.55rem);
+  --font-size-xl: clamp(1.95rem, 2.93vw + 1.22rem, 4.74rem);
+  --font-size-2xl: clamp(2.44rem, 4.08vw + 1.42rem, 6.31rem);
+  --font-size-3xl: clamp(3.05rem, 5.65vw + 1.64rem, 8.42rem);
+  --font-size-4x: clamp(3.81rem, 7.8vw + 1.87rem, 11.22rem);
+  --font-size-5xl: clamp(4.77rem, 10.72vw + 2.09rem, 14.96rem);
 
   --ls-tight: -0.005125rem;
 
@@ -115,7 +115,7 @@ html {
   background: var(--theme-bg);
   color: var(--theme-text);
   font-family: var(--font-body);
-  font-size: var(--theme-text-base);
+  font-size: var(--font-size-base);
   font-weight: 700;
   line-height: 1.5rem;
   text-rendering: optimizeLegibility;
