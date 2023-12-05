@@ -1,98 +1,97 @@
 ---
-import CompTicker from "./CompTicker.astro";
+import CompTicker from './CompTicker.astro';
 ---
 
 <!-- <pre class="debug">Hero.astro</pre> -->
 <header>
-  <CompTicker ticker="Rien Bexkens" />
-  <div class="details">
-    <div>
-      <h2>a.k.a Rini Tortellini</h2>
-    </div>
-    <div>
-      <h2>Skills</h2>
-      <ul>
-        <li>Film Director</li>
-        <li>Screen- & Copywriter</li>
-        <li>(Executive) Producer</li>
-      </ul>
-    </div>
+	<CompTicker ticker="Rien Bexkens" />
+	<div class="details">
+		<div>
+			<h2>a.k.a Rini Tortellini</h2>
+		</div>
+		<div>
+			<h2>Skills</h2>
+			<ul>
+				<li>Film Director</li>
+				<li>Screen- & Copywriter</li>
+				<li>(Executive) Producer</li>
+			</ul>
+		</div>
 
-    <div>
-      <h2>Office + Studio</h2>
-      <ul>
-        <li>shoot@rienbexkens.com</li>
-        <li>+31 (0) 6 39639578</li>
-      </ul>
-    </div>
+		<div>
+			<h2>Office + Studio</h2>
+			<ul>
+				<li>shoot@rienbexkens.com</li>
+				<li>+31 (0) 6 39639578</li>
+			</ul>
+		</div>
 
-    <div>
-      <h2>Contact</h2>
-      <ul>
-        <li>Westersingel 97</li>
-        <li>3015 LC, Rotterdam</li>
-        <li>The Netherlands</li>
-      </ul>
-    </div>
-  </div>
+		<div>
+			<h2>Contact</h2>
+			<ul>
+				<li>Westersingel 97</li>
+				<li>3015 LC, Rotterdam</li>
+				<li>The Netherlands</li>
+			</ul>
+		</div>
+	</div>
 </header>
 
 <style>
-  header {
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: min-content 1fr;
-    gap: var(--spacer-vw-gap);
-    min-height: 100vh;
-  }
+	header {
+		overflow: hidden;
+		display: grid;
+		grid-template-rows: min-content 1fr;
+		gap: var(--spacer-vw-gap);
+		min-height: 100vh;
+	}
 
-  .details {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0 var(--spacer-vw-gap);
-    padding: 0 var(--spacer-vw-margin);
-  }
-  .details > div {
-    border-left: var(--border-width) solid var(--text);
-    padding: 0 calc(var(--spacer-vw-padding) / 2);
-  }
-  ul {
-    padding: calc(0.5 * var(--spacer-vw-gap)) 0 var(--spacer-vw-gap) 0;
-  }
+	.details {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0 var(--spacer-vw-gap);
+		padding: 0 var(--spacer-vw-margin);
+	}
+	.details > div {
+		border-left: var(--border-width) solid var(--theme-text);
+		padding: 0 calc(var(--spacer-vw-padding) / 2);
+	}
+	ul {
+		padding: calc(0.5 * var(--spacer-vw-gap)) 0 var(--spacer-vw-gap) 0;
+	}
 
-  li,
-  li a {
-    font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    line-height: 1.25;
-  }
+	li,
+	li a {
+		font-family: var(--font-body);
+		font-size: var(--theme-text-sm);
+		font-weight: 600;
+		line-height: 1.25;
+	}
 
-  @media only screen and (min-width: 768px) {
-    .details {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+	@media only screen and (min-width: 768px) {
+		.details {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 
-      gap: var(--spacer-vw-gap);
-      padding: var(--spacer-vw-margin);
-      padding-bottom: 0;
-    }
-    ul {
-      padding: calc(0.5 * var(--spacer-vw-gap)) 0
-        calc(1.5 * var(--spacer-vw-gap)) 0;
-    }
+			gap: var(--spacer-vw-gap);
+			padding: var(--spacer-vw-margin);
+			padding-bottom: 0;
+		}
+		ul {
+			padding: calc(0.5 * var(--spacer-vw-gap)) 0 calc(1.5 * var(--spacer-vw-gap)) 0;
+		}
 
-    li,
-    li a {
-      font-size: var(--text-sm);
-    }
-  }
-  /* 
+		li,
+		li a {
+			font-size: var(--theme-text-sm);
+		}
+	}
+	/* 
   * {
     outline: 1px solid rgba(255, 0, 0, 0.5);
   } */
 
-  /* * > div > div {
+	/* * > div > div {
     background: var(--color-debug);
   } */
 </style>

@@ -18,7 +18,7 @@ const { ticker } = Astro.props;
 	:root {
 		/* Colors */
 		--duration: 60s;
-		--ticker-font: clamp(16rem, 6rem + 32vw, 24rem);
+		--ticker-font: clamp(16rem, 12rem + 40vw, 32rem);
 	}
 
 	h1 {
@@ -86,14 +86,12 @@ const { ticker } = Astro.props;
 	.ticker__item {
 		display: inline-block;
 		padding: 0 calc(var(--ticker-font) / 10);
-		letter-spacing: -0.25vw;
+		letter-spacing: -0.55vw;
 	}
 
 	@media screen and (min-width: 600px) {
 		:root {
-			/* Colors */
-
-			--ticker-font: clamp(28rem, 8rem + 30vw, 56rem);
+			--ticker-font: clamp(16rem, 6rem + 25vw, 52rem);
 		}
 	}
 </style>

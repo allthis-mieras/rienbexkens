@@ -1,131 +1,146 @@
 <input id="color-mode" type="checkbox" name="color-mode" />
 <label for="color-mode" class="color-mode">
-  <span class="dark-mode-hide">Dark Mode</span>
-  <span class="light-mode-hide">Light Mode</span>
+	<span class="dark-mode-hide">Dark Mode</span>
+	<span class="light-mode-hide">Light Mode</span>
 </label>
 
 <style is:global>
-  :root {
-    --bg: var(--clr-yellow);
-    --text: var(--clr-purple);
-    --gradient: 255, 213, 97;
-    --theme-blend: var(--theme-blend);
-    --gradient-blend: var(--gradient-blend);
-    --gradient-invert: var(--gradient-invert);
-  }
+	:root {
+		--gradient-blend: var(--gradient-blend);
+		--gradient-invert: var(--gradient-invert);
+		--gradient: 255, 213, 97;
+		--img-blend: var(--img-blend);
+		--img-mix-blend: var(--img-mixblend);
+		--img-mix-overlay: var(--img-mix-overlay);
+		--img-overlay: var(--img-overlay);
+		--media-blend: var(--media-blend);
+		--theme-bg: var(--clr-yellow);
+		--theme-text: var(--clr-purple);
+	}
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: var(--clr-purple);
-      --text: var(--clr-yellow);
-      --gradient: 57, 10, 87;
-      --theme-blend: multiply;
-      --gradient-blend: multiply;
-      --gradient-invert: none;
-    }
-  }
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--gradient-blend: multiply;
+			--gradient-invert: none;
+			--gradient: 57, 10, 87;
+			--img-blend: screen;
+			--img-mix-blend: screen;
+			--img-mix-overlay: color;
+			--img-overlay: var(--theme-text);
+			--media-blend: darken;
+			--theme-bg: var(--clr-purple);
+			--theme-text: var(--clr-yellow);
+		}
+	}
 
-  #color-mode,
-  label {
-    position: fixed;
-    /* top: 2rem;
+	#color-mode,
+	label {
+		position: fixed;
+		/* top: 2rem;
     right: 2rem; */
-    z-index: 100;
-  }
+		z-index: 100;
+	}
 
-  #color-mode:checked ~ * {
-    --bg: var(--clr-purple);
-    --text: var(--clr-yellow);
-    --gradient: 57, 10, 87;
-    --theme-blend: multiply;
-    --gradient-blend: multiply;
-    --gradient-invert: none;
-  }
+	#color-mode:checked ~ * {
+		--gradient-blend: multiply;
+		--gradient-invert: none;
+		--gradient: 57, 10, 87;
+		--img-mix-blend: screen;
+		--img-overlay: var(--theme-text);
+		--media-blend: multiply;
+		--theme-bg: var(--clr-purple);
+		--theme-text: var(--clr-yellow);
+	}
 
-  @media (prefers-color-scheme: dark) {
-    #color-mode:checked ~ * {
-      --bg: var(--clr-yellow);
-      --text: var(--clr-purple);
-      --gradient: 0, 0, 0;
-      --theme-blend: screen;
-      --gradient-blend: screen;
-      --gradient-invert: invert(100%);
-    }
-  }
+	@media (prefers-color-scheme: dark) {
+		#color-mode:checked ~ * {
+			--theme-bg: var(--clr-yellow);
+			--theme-text: var(--clr-purple);
 
-  .light-mode-hide {
-    display: none;
-  }
+			--media-blend: screen;
 
-  @media (prefers-color-scheme: dark) {
-    .dark-mode-hide {
-      display: none;
-    }
-  }
+			--img-overlay: var(--theme-text);
+			--img-mix-blend: darken;
 
-  @media (prefers-color-scheme: dark) {
-    .light-mode-hide {
-      display: initial;
-    }
-  }
+			--gradient: 0, 0, 0;
+			--gradient-blend: screen;
+			--gradient-invert: invert(100%);
+		}
+	}
 
-  label {
-    cursor: pointer;
-    position: fixed;
-    background: var(--text);
-    color: var(--bg);
-    padding: 0 0.475rem;
-    top: var(--spacer-vw-margin);
-    right: var(--spacer-vw-margin);
-    display: flex;
-    align-items: center;
-    border-radius: 0.25rem;
-    font-size: calc(0.5 * var(--text-sm)) !important;
-    /* box-shadow:
-      0 2px var(--bg),
-      0 4px var(--text); */
-    user-select: none;
-    z-index: 100;
-  }
+	.light-mode-hide {
+		display: none;
+	}
 
-  input[type="checkbox"]:focus + label {
-    outline: 2px dashed var(--text);
-    outline-offset: 4px;
-  }
+	@media (prefers-color-scheme: dark) {
+		.dark-mode-hide {
+			display: none;
+		}
+	}
 
-  label:active {
-    transform: translateY(1px);
-    box-shadow:
-      0 1px var(--bg),
-      0 3px var(--text);
-  }
+	@media (prefers-color-scheme: dark) {
+		.light-mode-hide {
+			display: initial;
+		}
+	}
 
-  label:after {
-    content: "✔\FE0E";
-    height: 0.5rem;
-    width: 0.5rem;
-    margin-left: 0.25rem;
-    border: solid 2px var(--bg);
-    text-align: center;
-    border-radius: 0.5rem;
-    color: transparent;
-    line-height: 1;
-  }
+	label {
+		cursor: pointer;
+		position: fixed;
+		background: var(--theme-text);
+		color: var(--theme-bg);
+		padding: 0 0.475rem;
+		top: var(--spacer-vw-margin);
+		right: var(--spacer-vw-margin);
+		display: flex;
+		align-items: center;
+		border-radius: 0.25rem;
+		font-size: calc(0.5 * var(--theme-text-sm)) !important;
+		/* box-shadow:
+      0 2px var(--theme-bg),
+      0 4px var(--theme-text); */
+		user-select: none;
+		z-index: 100;
+	}
 
-  #color-mode:checked + label:after {
-    color: var(--bg);
-  }
+	input[type='checkbox']:focus + label {
+		outline: 2px dashed var(--theme-text);
+		outline-offset: 4px;
+	}
 
-  input[type="checkbox"] {
-    opacity: 0.00001;
-    position: absolute;
-  }
+	label:active {
+		transform: translateY(1px);
+		box-shadow:
+			0 1px var(--theme-bg),
+			0 3px var(--theme-text);
+	}
 
-  .color-scheme-wrapper {
-    min-height: 100vh;
-    background: var(--bg);
-    color: var(--text);
-    transition: background var(--theme-transition);
-    transition: color var(--theme-transition);
-  }
+	label:after {
+		content: '✔\FE0E';
+		height: 0.5rem;
+		width: 0.5rem;
+		margin-left: 0.25rem;
+		border: solid 2px var(--theme-bg);
+		text-align: center;
+		border-radius: 0.5rem;
+		color: transparent;
+		line-height: 1;
+	}
+
+	#color-mode:checked + label:after {
+		color: var(--theme-bg);
+	}
+
+	input[type='checkbox'] {
+		opacity: 0.00001;
+		position: absolute;
+	}
+
+	.color-scheme-wrapper {
+		min-height: 100vh;
+		background: var(--theme-bg);
+		color: var(--theme-text);
+		transition: background var(--theme-transition);
+		transition: color var(--theme-transition);
+	}
 </style>
