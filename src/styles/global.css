@@ -28,7 +28,7 @@
   --font-heading: neue-haas-grotesk-display, var(--font-system);
 
   /* Text Sizes */
-  /* https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=400&minRatio=1.25&maxFontSize=32&maxWidth=1920&maxRatio=1.333&steps=xs%2Csm%2Cbase%2Cmd%2Clg%2Cxl%2C2xl%2C3xl%2C4x%2C5xl&baseStep=base&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1280 */
+  
   --font-size-xs: clamp(0.64rem, 0.51vw + 0.51rem, 1.13rem);
   --font-size-sm: clamp(0.8rem, 0.74vw + 0.62rem, 1.5rem);
   --font-size-base: clamp(1rem, 1.05vw + 0.74rem, 2rem);
