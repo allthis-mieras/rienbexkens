@@ -1,102 +1,99 @@
 /* Global variables */
 :root {
-  /* Colors */
-  --clr-black: #07070a;
-  --clr-yellow: rgb(255, 213, 97);
-  --clr-white: #ffffff;
+	/* Colors */
+	--clr-black: #07070a;
+	--clr-yellow: rgb(255, 213, 97);
+	--clr-white: #ffffff;
 
-  /* Alternative Colors */
-  --clr-blue: #1b17fe;
-  --clr-moss: #617f4f;
-  --clr-purple: rgb(57, 10, 87);
+	/* Alternative Colors */
+	--clr-blue: #1b17fe;
+	--clr-moss: #617f4f;
+	--clr-purple: rgb(57, 10, 87);
 
-  --theme-bg: var(--clr-yellow);
-  --theme-text: var(--clr-purple);
+	--theme-bg: var(--clr-yellow);
+	--theme-text: var(--clr-purple);
 
-  --media-blend: normal;
-  --img-overlay: var(--clr-purple);
-  --img-mix-blend: screen;
-  --img-mix-overlay: color;
+	--media-blend: normal;
+	--img-mix-blend: screen;
+	--img-clr-overlay: var(--clr-purple);
+	--img-clr-mix: color;
 
-  --gradient-blend: multiply;
-  --gradient-invert: invert(100%);
+	--gradient-blend: multiply;
+	--gradient-invert: invert(100%);
 
-  /* Fonts */
-  --font-system: "Helvetica Neue", Helvetica, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-body: neue-haas-grotesk-text, var(--font-system);
-  --font-heading: neue-haas-grotesk-display, var(--font-system);
+	/* Fonts */
+	--font-system: 'Helvetica Neue', Helvetica, system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', sans-serif;
+	--font-body: neue-haas-grotesk-text, var(--font-system);
+	--font-heading: neue-haas-grotesk-display, var(--font-system);
 
-  /* Text Sizes */
-  
-  --font-size-xs: clamp(0.64rem, 0.51vw + 0.51rem, 1.13rem);
-  --font-size-sm: clamp(0.8rem, 0.74vw + 0.62rem, 1.5rem);
-  --font-size-base: clamp(1rem, 1.05vw + 0.74rem, 2rem);
-  --font-size-md: clamp(1.25rem, 1.49vw + 0.88rem, 2.67rem);
-  --font-size-lg: clamp(1.56rem, 2.1vw + 1.04rem, 3.55rem);
-  --font-size-xl: clamp(1.95rem, 2.93vw + 1.22rem, 4.74rem);
-  --font-size-2xl: clamp(2.44rem, 4.08vw + 1.42rem, 6.31rem);
-  --font-size-3xl: clamp(3.05rem, 5.65vw + 1.64rem, 8.42rem);
-  --font-size-4x: clamp(3.81rem, 7.8vw + 1.87rem, 11.22rem);
-  --font-size-5xl: clamp(4.77rem, 10.72vw + 2.09rem, 14.96rem);
+	/* Text Sizes */
 
-  --ls-tight: -0.005125rem;
+	--font-size-xs: clamp(0.64rem, 0.51vw + 0.51rem, 1.13rem);
+	--font-size-sm: clamp(0.8rem, 0.74vw + 0.62rem, 1.5rem);
+	--font-size-base: clamp(1rem, 1.05vw + 0.74rem, 2rem);
+	--font-size-md: clamp(1.25rem, 1.49vw + 0.88rem, 2.67rem);
+	--font-size-lg: clamp(1.56rem, 2.1vw + 1.04rem, 3.55rem);
+	--font-size-xl: clamp(1.95rem, 2.93vw + 1.22rem, 4.74rem);
+	--font-size-2xl: clamp(2.44rem, 4.08vw + 1.42rem, 6.31rem);
+	--font-size-3xl: clamp(3.05rem, 5.65vw + 1.64rem, 8.42rem);
+	--font-size-4x: clamp(3.81rem, 7.8vw + 1.87rem, 11.22rem);
+	--font-size-5xl: clamp(4.77rem, 10.72vw + 2.09rem, 14.96rem);
 
-  /* Space */
-  --space-base: 1rem;
-  --space-xxs: calc(0.25 * var(--space-base));
-  --space-xs: calc(0.5 * var(--space-base));
-  --space-sm: calc(0.75 * var(--space-base));
-  --space-md: calc(1.25 * var(--space-base));
-  --space-lg: calc(2 * var(--space-base));
-  --space-xl: calc(3.25 * var(--space-base));
-  --space-xxl: calc(5.25 * var(--space-base));
+	--ls-tight: -0.005125rem;
 
-  --spacer-vw-y: clamp(3rem, 3rem + 4vh, 8rem);
-  --spacer-vw-gap: clamp(1rem, -1.5rem + 4vw, 1.5rem);
-  --spacer-vw-padding: clamp(1rem, -1.5rem + 4vw, 2rem);
-  --spacer-vw-margin: clamp(1rem, -1.5rem + 4vw, 2rem);
+	/* Space */
+	--space-base: 1rem;
+	--space-xxs: calc(0.25 * var(--space-base));
+	--space-xs: calc(0.5 * var(--space-base));
+	--space-sm: calc(0.75 * var(--space-base));
+	--space-md: calc(1.25 * var(--space-base));
+	--space-lg: calc(2 * var(--space-base));
+	--space-xl: calc(3.25 * var(--space-base));
+	--space-xxl: calc(5.25 * var(--space-base));
 
-  --border-width: clamp(2px, 0.0446rem + 0.0893vw, 0.125rem);
-  /* --spacer-y-vw-full: calc(-1 * var(--spacer-margin-vw)); */
+	--spacer-vw-y: clamp(3rem, 3rem + 4vh, 8rem);
+	--spacer-vw-gap: clamp(1rem, -1.5rem + 4vw, 1.5rem);
+	--spacer-vw-padding: clamp(1rem, -1.5rem + 4vw, 2rem);
+	--spacer-vw-margin: clamp(1rem, -1.5rem + 4vw, 2rem);
 
-  /* Shadows */
-  --shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01),
-    0px 4px 2px rgba(9, 11, 17, 0.01), 0px 2px 2px rgba(9, 11, 17, 0.02),
-    0px 0px 1px rgba(9, 11, 17, 0.03);
-  --shadow-md: 0px 28px 11px rgba(9, 11, 17, 0.01),
-    0px 16px 10px rgba(9, 11, 17, 0.03), 0px 7px 7px rgba(9, 11, 17, 0.05),
-    0px 2px 4px rgba(9, 11, 17, 0.06);
-  --shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01),
-    0px 35px 21px rgba(9, 11, 17, 0.05), 0px 16px 16px rgba(9, 11, 17, 0.1),
-    0px 4px 9px rgba(9, 11, 17, 0.12);
+	--border-width: clamp(2px, 0.0446rem + 0.0893vw, 0.125rem);
+	/* --spacer-y-vw-full: calc(-1 * var(--spacer-margin-vw)); */
 
-  /* Transitions */
-  --easing-hover: 1.6s cubic-bezier(0.25, 1, 0.5, 1); /* easeOutQuart */
-  --easing-button-hover: 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* easeOutQuart */
-  --easing-nav-out: 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  --easing-nav-in: 0.6s cubic-bezier(0.83, 0, 0.17, 1);
-  --theme-transition: 0.2s ease-in-out;
+	/* Shadows */
+	--shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01), 0px 4px 2px rgba(9, 11, 17, 0.01),
+		0px 2px 2px rgba(9, 11, 17, 0.02), 0px 0px 1px rgba(9, 11, 17, 0.03);
+	--shadow-md: 0px 28px 11px rgba(9, 11, 17, 0.01), 0px 16px 10px rgba(9, 11, 17, 0.03),
+		0px 7px 7px rgba(9, 11, 17, 0.05), 0px 2px 4px rgba(9, 11, 17, 0.06);
+	--shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01), 0px 35px 21px rgba(9, 11, 17, 0.05),
+		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
 
-  --duration: 90s;
+	/* Transitions */
+	--easing-hover: 1.6s cubic-bezier(0.25, 1, 0.5, 1); /* easeOutQuart */
+	--easing-button-hover: 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* easeOutQuart */
+	--easing-nav-out: 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+	--easing-nav-in: 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+	--theme-transition: 0.2s ease-in-out;
 
-  /* Breakpoints */
-  --breakpoint-xs: 0px; /* 0-479: Portrait (small handset > large handset) */
-  --breakpoint-sm: 480px; /* 480-767: Portrait (large handset > small tablet) + Landscape (small handset) */
-  --breakpoint-md: 768px; /* 768-1023: Portrait (large tablet) + Landscape (large handset > small tablet) */
-  --breakpoint-lg: 1024px; /* 1024-1439: 	Landscape (large tablet > desktop) */
-  --breakpoint-xl: 1440px; /* 480-767: Landscape (large tablet > desktop) */
+	--duration: 90s;
 
-  /* Debug */
-  --color-debug: rgba(255, 0, 0, 0.8);
+	/* Breakpoints */
+	--breakpoint-xs: 0px; /* 0-479: Portrait (small handset > large handset) */
+	--breakpoint-sm: 480px; /* 480-767: Portrait (large handset > small tablet) + Landscape (small handset) */
+	--breakpoint-md: 768px; /* 768-1023: Portrait (large tablet) + Landscape (large handset > small tablet) */
+	--breakpoint-lg: 1024px; /* 1024-1439: 	Landscape (large tablet > desktop) */
+	--breakpoint-xl: 1440px; /* 480-767: Landscape (large tablet > desktop) */
+
+	/* Debug */
+	--color-debug: rgba(255, 0, 0, 0.8);
 }
 
 /* Dark Mode https://codepen.io/shadowfaxrodeo/pen/JjbzNMz */
 
 * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
 }
 
 /* Debug Stuff */
@@ -112,55 +109,55 @@
 
 body,
 html {
-  height: 100%;
-  background: var(--theme-bg);
-  color: var(--theme-text);
-  font-family: var(--font-body);
-  font-size: var(--font-size-base);
-  font-weight: 700;
-  line-height: 1.5rem;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
+	height: 100%;
+	background: var(--theme-bg);
+	color: var(--theme-text);
+	font-family: var(--font-body);
+	font-size: var(--font-size-base);
+	font-weight: 700;
+	line-height: 1.5rem;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
 }
 
 a {
-  color: var(--theme-text);
+	color: var(--theme-text);
 }
 
 #content {
-  display: grid;
+	display: grid;
 }
 
 .ar34 {
-  aspect-ratio: 3 / 4;
+	aspect-ratio: 3 / 4;
 }
 
 .tw {
-  text-wrap: balance;
+	text-wrap: balance;
 }
 
 pre.debug {
-  background: rgba(255, 0, 0, 0.5);
-  border: 1px dotted rgba(255, 0, 0, 0.9);
-  font-family: monospace;
-  font-size: 0.875rem;
-  line-height: 1;
-  border-radius: 0.5rem;
-  padding: 0.2rem 0.5rem;
+	background: rgba(255, 0, 0, 0.5);
+	border: 1px dotted rgba(255, 0, 0, 0.9);
+	font-family: monospace;
+	font-size: 0.875rem;
+	line-height: 1;
+	border-radius: 0.5rem;
+	padding: 0.2rem 0.5rem;
 }
 
 @media (min-width: 768px) {
-  :root {
-    --base-amount: calc(100vw / 16);
-    --base-size: calc(var(--base-amount) / 5);
-  }
-  #content {
-    gap: var(--spacer-vw-padding);
-  }
+	:root {
+		--base-amount: calc(100vw / 16);
+		--base-size: calc(var(--base-amount) / 5);
+	}
+	#content {
+		gap: var(--spacer-vw-padding);
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :global(html) {
-    scroll-behavior: auto;
-  }
+	:global(html) {
+		scroll-behavior: auto;
+	}
 }

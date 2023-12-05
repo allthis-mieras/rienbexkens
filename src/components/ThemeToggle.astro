@@ -6,50 +6,53 @@
 
 <style is:global>
 	:root {
+		--theme-bg: var(--clr-yellow);
+		--theme-text: var(--clr-purple);
+
+		--media-blend: var(--media-blend);
+		--img-mix-blend: var(--img-mix-blend);
+		--img-clr-overlay: var(--clr-purple);
+		--img-clr-mix: color;
+
 		--gradient-blend: var(--gradient-blend);
 		--gradient-invert: var(--gradient-invert);
 		--gradient: 255, 213, 97;
-		--img-blend: var(--img-blend);
-		--img-mix-blend: var(--img-mixblend);
-		--img-mix-overlay: var(--img-mix-overlay);
-		--img-overlay: var(--img-overlay);
-		--media-blend: var(--media-blend);
-		--theme-bg: var(--clr-yellow);
-		--theme-text: var(--clr-purple);
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
+			--theme-bg: var(--clr-purple);
+			--theme-text: var(--clr-yellow);
+
+			--media-blend: screen;
+			--img-mix-blend: var(--img-mix-blend);
+			--img-clr-overlay: var(--clr-purple);
+			--img-clr-mix: color;
+
 			--gradient-blend: multiply;
 			--gradient-invert: none;
 			--gradient: 57, 10, 87;
-			--img-blend: screen;
-			--img-mix-blend: screen;
-			--img-mix-overlay: color;
-			--img-overlay: var(--theme-text);
-			--media-blend: darken;
-			--theme-bg: var(--clr-purple);
-			--theme-text: var(--clr-yellow);
 		}
 	}
 
 	#color-mode,
 	label {
 		position: fixed;
-		/* top: 2rem;
-    right: 2rem; */
 		z-index: 100;
 	}
 
 	#color-mode:checked ~ * {
+		--theme-bg: var(--clr-purple);
+		--theme-text: var(--clr-yellow);
+
+		--media-blend: screen;
+		--img-mix-blend: var(--img-mix-blend);
+		--img-clr-overlay: var(--clr-purple);
+		--img-clr-mix: color;
+
 		--gradient-blend: multiply;
 		--gradient-invert: none;
 		--gradient: 57, 10, 87;
-		--img-mix-blend: screen;
-		--img-overlay: var(--theme-text);
-		--media-blend: multiply;
-		--theme-bg: var(--clr-purple);
-		--theme-text: var(--clr-yellow);
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -57,10 +60,10 @@
 			--theme-bg: var(--clr-yellow);
 			--theme-text: var(--clr-purple);
 
-			--media-blend: screen;
-
-			--img-overlay: var(--theme-text);
-			--img-mix-blend: darken;
+			--media-blend: darken;
+			--img-mix-blend: screen;
+			--img-clr-overlay: var(--clr-purple);
+			--img-clr-mix: color;
 
 			--gradient: 0, 0, 0;
 			--gradient-blend: screen;

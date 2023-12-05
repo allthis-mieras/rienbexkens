@@ -44,7 +44,13 @@
 			<div class="office">
 				<h3 class="heading">Office</h3>
 				<ul>
-					<li><a class="link" href="https://www.google.com/maps/dir//Westersingel+97,+3015+LC+Rotterdam/@51.9135942,4.3924635,12z" target="blank" >Westersingel 97</a></li>
+					<li>
+						<a
+							class="link"
+							href="https://www.google.com/maps/dir//Westersingel+97,+3015+LC+Rotterdam/@51.9135942,4.3924635,12z"
+							target="blank">Westersingel 97</a
+						>
+					</li>
 					<li>3015 LC, Rotterdam</li>
 					<li>The Netherlands</li>
 				</ul>
@@ -53,7 +59,7 @@
 				<h3 class="heading">Social</h3>
 				<ul>
 					<li><a class="link" href="https://vimeo.com/rinitortellini" target="blank">Vimeo</a></li>
-					<li><a class="link" href="https://www.instagram.com/rini_tortellini/" >Instagram</a></li>
+					<li><a class="link" href="https://www.instagram.com/rini_tortellini/">Instagram</a></li>
 				</ul>
 			</div>
 		</div>
@@ -72,20 +78,15 @@
 	.media-wrapper {
 		background: var(--theme-text);
 		position: relative;
-		
 		top: var(--spacer-vw-padding);
-		mix-blend-mode: var(--img-blend);
+		mix-blend-mode: var(--media-blend);
 		height: calc(100vh - var(--spacer-vw-padding) - var(--spacer-vw-padding));
 		max-height: 60vh;
-		overflow:hidden;
-		
-
-		
-		
+		overflow: hidden;
 	}
 
 	.media-wrapper img {
-		mix-blend-mode: var(--img-overlay);
+		mix-blend-mode: var(--img-mix-blend);
 		object-fit: cover;
 		height: 100%;
 		/* aspect-ratio: 1/1; */
@@ -164,7 +165,7 @@
 		}
 
 		.media-wrapper img {
-			mix-blend-mode: var(--media-blend);
+			/* mix-blend-mode: var(--media-blend); */
 			object-fit: cover;
 			height: 100%;
 		}
