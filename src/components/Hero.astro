@@ -21,17 +21,22 @@ import Marquee from './Marquee.astro'
 		<div>
 			<h2>Office + Studio</h2>
 			<ul>
-				<li><a href="mailto:shoot@rienbexkens.com">shoot@rienbexkens.com</a></li>
-				<li><a href="tel:+31639639578">+31 (0) 6 39639578</a></li>
+				<li>
+					<a
+						class="link"
+						href="google.com/maps/dir/51.9238281,4.493274/Nieuwe+Binnenweg+23,+3014+GB+Rotterdam"
+						target="blank">Nieuwe Binnenweg 23</a
+					>
+				</li>
+				<li>3014 GB, Rotterdam</li>
 			</ul>
 		</div>
 
 		<div>
 			<h2>Contact</h2>
 			<ul>
-				<li>Westersingel 97</li>
-				<li>3015 LC, Rotterdam</li>
-				<li>The Netherlands</li>
+				<li><a href="mailto:shoot@rienbexkens.com">shoot@rienbexkens.com</a></li>
+				<li><a href="tel:+31639639578">+31 (0) 6 39639578</a></li>
 			</ul>
 		</div>
 	</div>
@@ -66,6 +71,7 @@ import Marquee from './Marquee.astro'
 		font-size: var(--font-size-sm);
 		font-weight: 600;
 		line-height: 1.25;
+		text-decoration: none;
 	}
 
 	@media only screen and (min-width: 768px) {
