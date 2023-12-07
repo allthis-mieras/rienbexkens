@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
-    "astro": "^3.6.3",
+    "astro": "^4.0.2",
     "gsap": "^3.12.3",
     "mouse-follower": "^1.1.2",
     "p5.grain": "^0.6.1",

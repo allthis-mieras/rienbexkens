@@ -3,13 +3,14 @@
 // https://docs.astro.build/en/core-concepts/layouts/
 
 // Component Imports
-import BaseHead from '../components/base/BaseHead.astro'
+import BaseHead from '../components/BaseHead.astro'
 import Footer from '../components/Footer.astro'
 import ThemeToggle from '../components/ThemeToggle.astro'
 
 interface Props {
-	title?: string | undefined
-	description?: string | undefined
+	title?: string
+	description?: string
+	image?: string
 }
 
 const { title, description } = Astro.props
