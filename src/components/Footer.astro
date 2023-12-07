@@ -1,6 +1,6 @@
 ---
-const { kvk, iban, btw, terms } = Astro.props;
-import FooterCredits from './FooterCredits.astro';
+const { kvk, iban, btw, terms } = Astro.props
+import FooterCredits from './FooterCredits.astro'
 ---
 
 <footer>
@@ -20,22 +20,31 @@ import FooterCredits from './FooterCredits.astro';
 <script type="application/ld+json">
 	{
 		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Jeffrey de Roode",
-		"url": "https://jeffreyderoode.nl/",
-		"address": "Goudsesingel 136",
+		"@type": "Person",
+		"name": "Rien Bexkens",
+		"jobTitle": "Director",
+		"url": "https://rienbexkens.com",
 		"sameAs": [
-			"https://www.facebook.com/jeffrey.manuel.334",
-			"https://www.linkedin.com/in/jeffrey-de-roode-857575139/",
-			"https://www.instagram.com/jeffreyderoode/"
+			"https://linkedin.com/in/rien-bexkens-18352748",
+			"https://instagram.com/rini_tortellini/",
+			"https://vimeo.com/rinitortellini",
+			"https://imdb.com/name/nm8576308/"
 		],
 		"address": {
 			"@type": "PostalAddress",
-			"streetAddress": "Goudsesingel 136",
+			"streetAddress": "Nieuwe Binnenweg 23",
 			"addressRegion": "ZH",
-			"postalCode": "3011 KD",
+			"postalCode": "3014 GB",
 			"addressLocality": "Rotterdam",
 			"addressCountry": "NL"
+		},
+		"email": "shoot@rienbexkens.com",
+		"telephone": "+31639639578",
+		"image": "./assets/rien-bexkens-marwan-new.png",
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Rien Bexkens",
+			"url": "https://rienbexkens.com"
 		}
 	}
 </script>
