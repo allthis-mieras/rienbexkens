@@ -13,7 +13,7 @@ interface Props {
 	image?: string
 }
 
-const { title, description } = Astro.props
+const { title, description, image = '/ogimage.png' } = Astro.props
 ---
 
 <html lang="en">
