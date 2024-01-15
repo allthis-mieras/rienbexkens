@@ -6,8 +6,6 @@ const { text } = Astro.props
 	<div class="marquee">
 		<h1 class="marquee__item">{text}</h1>
 		<h1 class="marquee__item">{text}</h1>
-		<h1 class="marquee__item">{text}</h1>
-		<h1 class="marquee__item">{text}</h1>
 	</div>
 </div>
 
@@ -18,7 +16,7 @@ const { text } = Astro.props
 
 	:root {
 		/* Colors */
-		--duration: 60s;
+		--duration: 30s;
 		--marquee-font: clamp(16rem, 12rem + 40vw, 32rem);
 	}
 
@@ -40,12 +38,10 @@ const { text } = Astro.props
 	}
 
 	.marquee-wrap {
-		/* position: fixed; */
-		/* bottom: 0; */
 		width: 100%;
 		overflow: hidden;
 		height: auto;
-		padding-left: 100%;
+		/* padding-left: 100%; */
 		box-sizing: content-box;
 		display: inline-block;
 	}
@@ -55,7 +51,7 @@ const { text } = Astro.props
 		/* height: 4rem; */
 		line-height: 1;
 		white-space: nowrap;
-		padding-right: 100%;
+		/* padding-right: 100%; */
 		box-sizing: content-box;
 
 		-webkit-animation-iteration-count: infinite;
@@ -76,7 +72,7 @@ const { text } = Astro.props
 
 	@media screen and (min-width: 600px) {
 		:root {
-			--marquee-font: calc(clamp(20rem, 21.43vw + 15.71rem - 20vh, 50rem));
+			--marquee-font: calc(clamp(20rem, 21.43vw + 15.71rem + 5vh, 60rem));
 			/* https://www.fluid-type-scale.com/calculate?minFontSize=320&minWidth=320&minRatio=8&maxFontSize=800&maxWidth=2560&maxRatio=12&steps=marquee&baseStep=marquee&prefix=font-size&decimals=2&useRems=on&remValue=16&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1920 */
 		}
 	}

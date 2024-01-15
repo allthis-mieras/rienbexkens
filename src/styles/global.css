@@ -2,8 +2,9 @@
 
 :root {
 	/* Colors */
-	--clr-black: #07070a;
+	--clr-black: #161616;
 	--clr-yellow: rgb(255, 213, 97);
+	--clr-orange: #f16c0d;
 	--clr-white: #ffffff;
 
 	/* Alternative Colors */
@@ -11,11 +12,11 @@
 	--clr-moss: #617f4f;
 	--clr-purple: rgb(57, 10, 87);
 
-	--theme-bg: var(--clr-yellow);
-	--theme-text: var(--clr-purple);
+	--theme-bg: var(--clr-orange);
+	--theme-text: var(--clr-black);
 
 	--media-blend: multiply;
-	--img-mix-blend: none;
+	--img-mix-blend: multiply;
 	--img-clr-overlay: var(--theme-text);
 	--img-clr-mix: color;
 
@@ -41,7 +42,7 @@
 	--font-size-4x: clamp(3.81rem, 7.8vw + 1.87rem, 11.22rem);
 	--font-size-5xl: clamp(4.77rem, 10.72vw + 2.09rem, 14.96rem);
 
-	--ls-tight: -0.005125rem;
+	--ls-tight: -0.0125rem;
 
 	/* Space */
 	--space-base: 1rem;
@@ -135,6 +136,11 @@ a {
 
 .tw {
 	text-wrap: balance;
+}
+
+a:hover,
+li a:hover {
+	color: var(--theme-hover);
 }
 
 pre.debug {

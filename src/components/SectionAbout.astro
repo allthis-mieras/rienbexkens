@@ -9,17 +9,19 @@
 			<p class="lead">
 				Filmmaker Rien Bexkens, also known as Rini Tortellini, directs fictional films,
 				documentaries, music videos, commercials and crossovers. His personal work strongly focuses
-				on societal issues, cautionary tales and defending - or selling  the underdog. As a
-				director, Rien Bexkens has a strong eye for aesthetics and cinematography with imagery often
-				biased towards hip-hop culture. Amidst these hard-to-miss visuals, his subjects remain
-				surprisingly human and real; their lives respectfully followed. Nevertheless his fictional
-				productions can also be influenced by cult, French New Wave, absurdism and/or humour noir.
+				on societal issues, cautionary tales and defending - or selling the anti-hero.
+			</p>
+			<p>
+				As a director, Rien Bexkens has a strong eye for aesthetics and cinematography with imagery
+				often biased towards hip-hop culture. Amidst these hard-to-miss visuals, his subjects remain
+				surprisingly human and real; their lives respectfully followed. Nevertheless his fictional
+				productions can also be influenced by cult, French New Wave, absurdism and/or humour noir.
 			</p>
 			<p>
 				As subject matter, Rien Bexkens is broadly interested in (street-) culture, travel, sports,
 				entrepreneurship and social engagement initiatives. Feeling displaced at times whilst
 				growing up, he found brotherhood in street-culture and witnessed firsthand the social
-				deprivation and injustice that accompanies many people’s realities within a multicultural
+				deprivation and injustice that accompanies many peoples realities within a multicultural
 				city like Rotterdam, leading to a relentless drive to uncover overlooked realities and
 				thereby also share his own personal story.
 			</p>
@@ -42,8 +44,10 @@
 			<div class="social">
 				<h3 class="heading">Social</h3>
 				<ul>
-					<li><a class="link" href="https://www.imdb.com/name/nm8576308/">IMDB</a></li>
-					<li><a class="link" href="https://vimeo.com/rinitortellini" target="blank">Vimeo</a></li>
+					<li><a class="link" href="https://www.imdb.com/name/nm8576308/">Work</a></li>
+					<li>
+						<a class="link" href="https://vimeo.com/rinitortellini" target="blank">Filmography</a>
+					</li>
 					<li><a class="link" href="https://www.instagram.com/rini_tortellini/">Instagram</a></li>
 					<li>
 						<a class="link" href="https://linkedin.com/in/rien-bexkens-18352748/">LinkedIn</a>
@@ -78,17 +82,17 @@
 		background: var(--theme-text);
 		position: relative;
 		top: var(--spacer-vw-padding);
-		mix-blend-mode: var(--media-blend);
-		height: calc(100vh - var(--spacer-vw-padding) - var(--spacer-vw-padding));
+		/* mix-blend-mode: var(--media-blend); */
+		/* height: calc(100vh - var(--spacer-vw-padding) - var(--spacer-vw-padding)); */
 		/* max-height: 60vh; */
 		overflow: hidden;
 	}
 
 	.media-wrapper img {
-		mix-blend-mode: var(--img-mix-blend);
+		/* mix-blend-mode: var(--img-mix-blend); */
 		object-fit: cover;
-		height: 100%;
-		/* aspect-ratio: 1/1; */
+		aspect-ratio: 1/1;
+		mix-blend-mode: var(--img-mix-blend);
 	}
 
 	.media-wrapper::after {
@@ -101,7 +105,7 @@
 		background: var(--theme-text);
 		mix-blend-mode: var(--img-clr-mix);
 		opacity: 1;
-		z-index: 20;
+		z-index: -1;
 	}
 
 	.content {
@@ -114,7 +118,7 @@
 	li,
 	li a {
 		font-size: var(--font-size-sm);
-		font-weight: 500;
+		font-weight: 600;
 		text-decoration: none;
 		line-height: 125%;
 	}
@@ -130,9 +134,9 @@
 	p {
 		font-family: var(--font-body);
 		margin-bottom: var(--spacer-vw-gap);
-		font-size: var(--font-size-base);
+		font-size: var(--font-size-sm);
 		letter-spacing: var(--ls-tight);
-		font-weight: 500;
+		font-weight: 00;
 		line-height: 120%;
 		text-wrap: balance;
 	}
@@ -162,6 +166,7 @@
 			position: sticky;
 			top: var(--spacer-vw-padding);
 			max-height: 100%;
+			height: 100vh;
 		}
 
 		.media-wrapper img {
@@ -179,15 +184,17 @@
 
 		li,
 		li a {
-			font-size: var(--font-size-sm);
+			font-size: var(--font-size-xs);
 		}
 
 		p.lead {
 			font-size: var(--font-size-base);
+			line-height: 112.5%;
 		}
 
 		p {
 			font-size: var(--font-size-sm);
+			line-height: 112.5%;
 		}
 	}
 </style>

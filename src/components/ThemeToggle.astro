@@ -1,19 +1,19 @@
-<input id="color-mode" type="checkbox" name="color-mode" />
-<label for="color-mode" class="color-mode">
+<input id="color-mode" type="checkbox" class="sr-only" id="darkmode-toggle" name="color-mode" />
+
+<label for="color-mode" class="color-mode toggle">
 	<span class="dark-mode-hide">Dark Mode</span>
 	<span class="light-mode-hide">Light Mode</span>
 </label>
 
 <style is:global>
 	:root {
-		--theme-bg: var(--clr-yellow);
-		--theme-text: var(--clr-purple);
-
-		--media-blend: darken;
-		--img-mix-blend: screen;
-		--img-clr-overlay: var(--img-clr-overlay);
+		--theme-bg: var(--clr-white);
+		--theme-text: var(--clr-orange);
+		--theme-hover: var(--clr-black);
+		/* --media-blend: darken; */
+		/* --img-mix-blend: screen; */
+		/* --img-clr-overlay: var(--img-clr-overlay); */
 		--img-clr-mix: color;
-
 		--gradient-blend: var(--gradient-blend);
 		--gradient-invert: var(--gradient-invert);
 		--gradient: 255, 213, 97;
@@ -21,14 +21,13 @@
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--theme-bg: var(--clr-purple);
-			--theme-text: var(--clr-yellow);
-
-			--media-blend: screen;
-			--img-mix-blend: var(--img-mix-blend);
-			--img-clr-overlay: var(--clr-purple);
+			--theme-bg: var(--clr-black);
+			--theme-text: var(--clr-orange);
+			--theme-hover: var(--clr-white);
+			/* --media-blend: screen; */
+			/* --img-mix-blend: var(--img-mix-blend); */
+			/* --img-clr-overlay: var(--clr-black); */
 			--img-clr-mix: color;
-
 			--gradient-blend: multiply;
 			--gradient-invert: none;
 			--gradient: 57, 10, 87;
@@ -42,13 +41,14 @@
 	}
 
 	#color-mode:checked ~ * {
-		--theme-bg: var(--clr-purple);
-		--theme-text: var(--clr-yellow);
+		--theme-bg: var(--clr-black);
+		--theme-text: var(--clr-orange);
+		--theme-hover: var(--clr-white);
 
 		--media-blend: screen;
-		--img-mix-blend: var(--img-mix-blend);
-		--img-clr-overlay: var(--clr-purple);
-		--img-clr-mix: color;
+		/* --img-mix-blend: var(--img-mix-blend); */
+		/* --img-clr-overlay: var(--clr-black); */
+		/* --img-clr-mix: color; */
 
 		--gradient-blend: multiply;
 		--gradient-invert: none;
@@ -57,13 +57,14 @@
 
 	@media (prefers-color-scheme: dark) {
 		#color-mode:checked ~ * {
-			--theme-bg: var(--clr-yellow);
-			--theme-text: var(--clr-purple);
+			--theme-bg: var(--clr-white);
+			--theme-text: var(--clr-orange);
+			--theme-hover: var(--clr-black);
 
 			--media-blend: darken;
-			--img-mix-blend: screen;
-			--img-clr-overlay: var(--clr-purple);
-			--img-clr-mix: color;
+			/* --img-mix-blend: screen; */
+			/* --img-clr-overlay: var(--clr-black); */
+			/* --img-clr-mix: color; */
 
 			--gradient: 0, 0, 0;
 			--gradient-blend: screen;
@@ -87,25 +88,7 @@
 		}
 	}
 
-	label {
-		cursor: pointer;
-		position: fixed;
-		background: var(--theme-text);
-		color: var(--theme-bg);
-		padding: 0 0.475rem;
-		top: var(--spacer-vw-margin);
-		right: var(--spacer-vw-margin);
-		display: flex;
-		align-items: center;
-		border-radius: 0.25rem;
-		font-size: calc(0.5 * var(--font-size-sm)) !important;
-		/* box-shadow:
-      0 2px var(--theme-bg),
-      0 4px var(--theme-text); */
-		user-select: none;
-		z-index: 100;
-	}
-
+	/* 
 	input[type='checkbox']:focus + label {
 		outline: 2px dashed var(--theme-text);
 		outline-offset: 4px;
@@ -116,9 +99,9 @@
 		box-shadow:
 			0 1px var(--theme-bg),
 			0 3px var(--theme-text);
-	}
+	} */
 
-	label:after {
+	/* label:after {
 		content: '✔\FE0E';
 		height: 0.5rem;
 		width: 0.5rem;
@@ -132,7 +115,7 @@
 
 	#color-mode:checked + label:after {
 		color: var(--theme-bg);
-	}
+	} */
 
 	input[type='checkbox'] {
 		opacity: 0.00001;
@@ -145,5 +128,65 @@
 		color: var(--theme-text);
 		transition: background var(--theme-transition);
 		transition: color var(--theme-transition);
+	}
+
+	.toggle {
+		font-size: calc(0.5 * var(--font-size-sm)) !important;
+		/* border: 0.125em solid currentColor; */
+		border-radius: 2em;
+		cursor: pointer;
+		display: block;
+		height: 2em;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		width: 3.75em;
+		background: var(--theme-text);
+		color: var(--theme-bg);
+	}
+	.toggle span {
+		background-color: currentColor;
+		border-radius: 2em;
+		display: block;
+		height: 1.5em;
+		left: 0.25em;
+		overflow: hidden;
+		position: absolute;
+		top: 0.25em;
+		text-indent: -9999px;
+		transition: left 0.25s;
+		width: 1.5em;
+		z-index: 2;
+	}
+
+	.toggle::before,
+	.toggle::after {
+		content: '';
+		display: block;
+		border-radius: 1em;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.toggle::after {
+		box-shadow: 0.25em 0.25em #5901d8;
+		height: 1.125em;
+		right: 0.9em;
+		top: 0.125em;
+		width: 1.125em;
+	}
+
+	.toggle::before {
+		background-color: #ffc409;
+		height: 0.625em;
+		outline: 0.25em dotted #ffc409;
+		outline-offset: 0.125em;
+		left: 0.7em;
+		top: 0.7em;
+		width: 0.625em;
+	}
+
+	input:checked ~ .toggle span {
+		left: 2em;
 	}
 </style>
