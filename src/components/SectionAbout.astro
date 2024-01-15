@@ -1,8 +1,8 @@
 <section>
 	<div class="media-wrapper">
 		<!-- add swiper.js -->
-		<img class="" src="./assets/rien-bexkens-marwan-new.png" alt="" />
-		<!-- <p>Photos by <a href="#">Marwan Magroun</a></p> -->
+		<img class="" src="./assets/rien-bexkens-marwan-new.png" alt="Photo by Marwan Magroun" />
+		<p class="credits">Photo by <a href="#">Marwan Magroun</a></p>
 	</div>
 	<div class="content">
 		<div class="content-bio">
@@ -27,7 +27,26 @@
 			</p>
 		</div>
 		<div class="details">
-			<div class="office">
+			<div>
+				<h3 class="heading">Work</h3>
+				<ul>
+					<li><a class="link" href="https://www.imdb.com/name/nm8576308/">IMDB</a></li>
+					<li>
+						<a class="link" href="https://vimeo.com/rinitortellini" target="blank">Vimeo</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="social">
+				<h3 class="heading">Social</h3>
+				<ul>
+					<li><a class="link" href="https://www.instagram.com/rini_tortellini/">Instagram</a></li>
+					<li>
+						<a class="link" href="https://linkedin.com/in/rien-bexkens-18352748/">LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+			<div>
 				<h3 class="heading">Office + Studio</h3>
 				<ul>
 					<li>
@@ -41,19 +60,6 @@
 					<li>The Netherlands</li>
 				</ul>
 			</div>
-			<div class="social">
-				<h3 class="heading">Social</h3>
-				<ul>
-					<li><a class="link" href="https://www.imdb.com/name/nm8576308/">Work</a></li>
-					<li>
-						<a class="link" href="https://vimeo.com/rinitortellini" target="blank">Filmography</a>
-					</li>
-					<li><a class="link" href="https://www.instagram.com/rini_tortellini/">Instagram</a></li>
-					<li>
-						<a class="link" href="https://linkedin.com/in/rien-bexkens-18352748/">LinkedIn</a>
-					</li>
-				</ul>
-			</div>
 			<div class="contact">
 				<h3 class="heading">Contact</h3>
 				<ul>
@@ -61,7 +67,7 @@
 						<a href="mailto:shoot@rienbexkens.com" class="link">shoot@rienbexkens.com</a>
 					</li>
 					<li>
-						<a href="tel://+31639639578" class="link">+31 (0) 6 39639578</a>
+						<a href="tel://+31639639578" class="link">+31 (0)6 39639578</a>
 					</li>
 				</ul>
 			</div>
@@ -91,7 +97,7 @@
 	.media-wrapper img {
 		/* mix-blend-mode: var(--img-mix-blend); */
 		object-fit: cover;
-		aspect-ratio: 1/1;
+		aspect-ratio: 3/4;
 		mix-blend-mode: var(--img-mix-blend);
 	}
 
@@ -152,6 +158,14 @@
 		padding: calc(var(--spacer-vw-gap) / 4) 0;
 		margin-bottom: calc(var(--spacer-vw-gap) / 4);
 		font-size: var(--font-size-base);
+	}
+
+	.credits {
+		z-index: 99;
+		color: var(--clr-white;);
+		position: absolute;
+		left: 0;
+		bottom: 0;
 	}
 
 	@media (min-width: 767px) {
