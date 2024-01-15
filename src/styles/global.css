@@ -14,6 +14,7 @@
 
 	--theme-bg: var(--clr-orange);
 	--theme-text: var(--clr-black);
+	--theme-media: var(--clr-white);
 
 	--media-blend: multiply;
 	--img-mix-blend: multiply;
@@ -151,6 +152,12 @@ pre.debug {
 	line-height: 1;
 	border-radius: 0.5rem;
 	padding: 0.2rem 0.5rem;
+}
+
+/* Make selected text gold on a red background */
+::selection {
+	color: var(--clr-black);
+	background-color: var(--clr-orange);
 }
 
 @media (min-width: 768px) {
