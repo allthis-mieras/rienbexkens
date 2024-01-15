@@ -1,8 +1,22 @@
 <section>
-	<div class="media-wrapper">
-		<!-- add swiper.js -->
-		<img class="" src="./assets/rien-bexkens-marwan-new.png" alt="Photo by Marwan Magroun" />
-		<p class="credits">Photo by <a href="#">Marwan Magroun</a></p>
+	<div class="visual">
+		<div class="media-wrapper">
+			<!-- add swiper.js -->
+			<img class="" src="./assets/rien-bexkens-marwan-new.png" alt="Photo by Marwan Magroun" />
+		</div>
+		<div class="credits">
+			<div class="">
+				<p>
+					Photo by <a
+						href="https://www.instagram.com/marwanmagroun?ref=rienbexkens.com"
+						target="_blank">Marwan Magroun</a
+					>.
+				</p>
+			</div>
+			<div class="">
+				<a href="./assets/rien-bexkens-marwan-2024.jpg">download photo</a>
+			</div>
+		</div>
 	</div>
 	<div class="content">
 		<div class="content-bio">
@@ -84,10 +98,13 @@
 	section * {
 		width: 100%;
 	}
+	.visual {
+		overflow: hidden;
+		position: relative;
+	}
 	.media-wrapper {
 		background: var(--theme-text);
-		position: relative;
-		top: var(--spacer-vw-padding);
+
 		/* mix-blend-mode: var(--media-blend); */
 		/* height: calc(100vh - var(--spacer-vw-padding) - var(--spacer-vw-padding)); */
 		/* max-height: 60vh; */
@@ -114,6 +131,35 @@
 		z-index: -1;
 	}
 
+	.credits {
+		justify-content: space-between;
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 0.5rem var(--spacer-vw-margin);
+		background: var(--theme-bg);
+		color: var(--clr-white;);
+		margin: 0;
+		gap: 1rem;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		display: none;
+	}
+
+	.credits p,
+	.credits a {
+		font-size: calc(0.875 * var(--font-size-xs));
+		margin: 0;
+		padding: 0;
+
+		line-height: 1;
+		border: 1px red solid;
+		text-decoration: none;
+	}
+
 	.content {
 		display: grid;
 		grid-auto-rows: min-content;
@@ -123,7 +169,7 @@
 
 	li,
 	li a {
-		font-size: var(--font-size-sm);
+		font-size: var(--font-size-base);
 		font-weight: 600;
 		text-decoration: none;
 		line-height: 125%;
@@ -155,18 +201,9 @@
 
 	.heading {
 		border-bottom: var(--border-width) solid var(--theme-text);
-		padding: calc(var(--spacer-vw-gap) / 4) 0;
+		padding: calc(var(--spacer-vw-gap) / 8) 0;
 		margin-bottom: calc(var(--spacer-vw-gap) / 4);
-		font-size: var(--font-size-base);
-	}
-
-	.credits {
-		z-index: 99;
-		color: var(--clr-white;);
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		display: none;
+		font-size: var(--font-size-sm);
 	}
 
 	@media (min-width: 767px) {
@@ -175,19 +212,25 @@
 			grid-template-columns: 1fr 1fr;
 			margin: 0 var(--spacer-vw-margin);
 		}
-
-		.media-wrapper {
-			background: var(--theme-media);
+		.visual {
 			position: sticky;
 			top: var(--spacer-vw-padding);
-			max-height: 100%;
 			height: 100vh;
+		}
+		.media-wrapper {
+			background: var(--theme-media);
+
+			height: 100%;
 		}
 
 		.media-wrapper img {
 			/* mix-blend-mode: var(--media-blend); */
 			object-fit: cover;
 			height: 100%;
+		}
+
+		.credits {
+			padding: calc(0.25 * var(--spacer-vw-padding)) 0;
 		}
 		.details {
 			gap: calc(var(--spacer-vw-gap));
@@ -199,7 +242,7 @@
 
 		li,
 		li a {
-			font-size: var(--font-size-xs);
+			font-size: var(--font-size-sm);
 		}
 
 		p.lead {
