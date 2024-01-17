@@ -31,7 +31,6 @@
 	--font-heading: neue-haas-grotesk-display, var(--font-system);
 
 	/* Font Sizes */
-
 	--font-size-xs: clamp(0.64rem, 0.51vw + 0.51rem, 1.13rem);
 	--font-size-sm: clamp(0.8rem, 0.74vw + 0.62rem, 1.5rem);
 	--font-size-base: clamp(1rem, 1.05vw + 0.74rem, 2rem);
@@ -77,7 +76,6 @@
 	--easing-nav-out: 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 	--easing-nav-in: 0.6s cubic-bezier(0.83, 0, 0.17, 1);
 	--theme-transition: 0.2s ease-in-out;
-
 	--duration: 90s;
 
 	/* Breakpoints */
@@ -112,15 +110,15 @@
 
 body,
 html {
-	height: 100%;
 	background: var(--theme-bg);
-	color: var(--theme-text);
-	font-family: var(--font-body);
-	font-size: var(--font-size-base);
-	font-weight: 700;
-	line-height: 1.5rem;
-	text-rendering: optimizeLegibility;
+	height: 100%;
 	scroll-behavior: smooth;
+	color: var(--theme-text);
+	font-weight: 700;
+	font-size: var(--font-size-base);
+	line-height: 1.5rem;
+	font-family: var(--font-body);
+	text-rendering: optimizeLegibility;
 }
 
 a {
@@ -145,19 +143,19 @@ li a:hover {
 }
 
 pre.debug {
-	background: rgba(255, 0, 0, 0.5);
 	border: 1px dotted rgba(255, 0, 0, 0.9);
-	font-family: monospace;
+	border-radius: 0.5rem;
+	background: rgba(255, 0, 0, 0.5);
+	padding: 0.2rem 0.5rem;
 	font-size: 0.875rem;
 	line-height: 1;
-	border-radius: 0.5rem;
-	padding: 0.2rem 0.5rem;
+	font-family: monospace;
 }
 
 /* Make selected text gold on a red background */
 ::selection {
-	color: var(--clr-black);
 	background-color: var(--clr-orange);
+	color: var(--clr-black);
 }
 
 @media (min-width: 768px) {
