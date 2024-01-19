@@ -44,11 +44,11 @@ import Marquee from './Marquee.astro'
 
 <style>
 	header {
-		overflow: hidden;
 		display: grid;
 		grid-template-rows: min-content 1fr;
 		gap: var(--spacer-vw-gap);
 		min-height: 100vh;
+		overflow: hidden;
 	}
 
 	.details {
@@ -62,7 +62,8 @@ import Marquee from './Marquee.astro'
 		padding: 0 calc(var(--spacer-vw-padding) / 2);
 	}
 	h2 {
-		font-size: var(--font-size-xs);
+		padding: 0;
+		font-size: var(--font-size-sm);
 		line-height: 112.5%;
 	}
 	ul {
@@ -72,10 +73,10 @@ import Marquee from './Marquee.astro'
 
 	li,
 	li a {
-		font-family: var(--font-body);
-		font-size: var(--font-size-xs);
 		font-weight: 600;
+		font-size: var(--font-size-sm);
 		line-height: 112.5%;
+		font-family: var(--font-body);
 		text-decoration: none;
 	}
 

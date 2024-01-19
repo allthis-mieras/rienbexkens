@@ -46,7 +46,7 @@
 		--theme-bg: var(--clr-black);
 		--theme-text: var(--clr-orange);
 		--theme-hover: var(--clr-white);
-		--theme-media: var(--clr-white);
+		--theme-media: var(--clr-orange);
 
 		--media-blend: screen;
 		/* --img-mix-blend: var(--img-mix-blend); */
@@ -63,7 +63,7 @@
 			--theme-bg: var(--clr-white);
 			--theme-text: var(--clr-orange);
 			--theme-hover: var(--clr-black);
-
+			--theme-media: var(--clr-white);
 			--media-blend: darken;
 			/* --img-mix-blend: screen; */
 			/* --img-clr-overlay: var(--clr-black); */
@@ -121,72 +121,72 @@
 	} */
 
 	input[type='checkbox'] {
-		opacity: 0.00001;
 		position: absolute;
+		opacity: 0.00001;
 	}
 
 	.color-scheme-wrapper {
-		min-height: 100vh;
-		background: var(--theme-bg);
-		color: var(--theme-text);
 		transition: background var(--theme-transition);
 		transition: color var(--theme-transition);
+		background: var(--theme-bg);
+		min-height: 100vh;
+		color: var(--theme-text);
 	}
 
 	.toggle {
-		font-size: calc(0.5 * var(--font-size-sm)) !important;
-		/* border: 0.125em solid currentColor; */
-		border-radius: 2em;
-		cursor: pointer;
 		display: block;
-		height: 2em;
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
-		width: 3.75em;
+		cursor: pointer;
+		/* border: 0.125em solid currentColor; */
+		border-radius: 2em;
 		background: var(--theme-text);
+		width: 3.75em;
+		height: 2em;
 		color: var(--theme-bg);
+		font-size: calc(0.5 * var(--font-size-sm)) !important;
 	}
 	.toggle span {
-		background-color: currentColor;
-		border-radius: 2em;
 		display: block;
-		height: 1.5em;
-		left: 0.25em;
-		overflow: hidden;
 		position: absolute;
 		top: 0.25em;
-		text-indent: -9999px;
-		transition: left 0.25s;
-		width: 1.5em;
+		left: 0.25em;
 		z-index: 2;
+		transition: left 0.25s;
+		border-radius: 2em;
+		background-color: currentColor;
+		width: 1.5em;
+		height: 1.5em;
+		overflow: hidden;
+		text-indent: -9999px;
 	}
 
 	.toggle::before,
 	.toggle::after {
-		content: '';
 		display: block;
-		border-radius: 1em;
 		position: absolute;
 		z-index: 1;
+		border-radius: 1em;
+		content: '';
 	}
 
 	.toggle::after {
-		box-shadow: 0.25em 0.25em #5901d8;
-		height: 1.125em;
-		right: 0.9em;
 		top: 0.125em;
+		right: 0.9em;
+		box-shadow: 0.25em 0.25em #5901d8;
 		width: 1.125em;
+		height: 1.125em;
 	}
 
 	.toggle::before {
-		background-color: #ffc409;
-		height: 0.625em;
+		top: 0.7em;
+		left: 0.7em;
 		outline: 0.25em dotted #ffc409;
 		outline-offset: 0.125em;
-		left: 0.7em;
-		top: 0.7em;
+		background-color: #ffc409;
 		width: 0.625em;
+		height: 0.625em;
 	}
 
 	input:checked ~ .toggle span {
