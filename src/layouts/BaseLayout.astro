@@ -18,10 +18,8 @@ const { title, description, image = '/ogimage.png' } = Astro.props
 ---
 
 <html lang="en">
-	<ThemeToggle />
-
 	<BaseHead title={title} description={description} image="./ogimage.png" />
-
+	<ThemeToggle />
 	<body>
 		<div class="color-scheme-wrapper">
 			<!-- <Nav /> -->
