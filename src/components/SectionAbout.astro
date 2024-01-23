@@ -10,9 +10,9 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 			<!-- add swiper.js -->
 			<Image
 				src={myImage}
-				width={myImage.width / 2}
-				densities={[1.5, 2]}
-				alt="Photo by Marwan Magroun"
+				widths={[320, 540, 720, myImage.width]}
+				sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${myImage.width}px`}
+				alt="Rien Bexkens by Marwan Magroun"
 			/>
 
 			<!-- <img class="" src="./assets/rien-bexkens-marwan-new.png" alt="Photo by Marwan Magroun" /> -->
@@ -130,9 +130,10 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 			overflow: hidden;
 		}
 
-		.media-wrapper img {
+		.media-wrapper > img {
 			mix-blend-mode: var(--img-mix-blend);
 			aspect-ratio: 3/4;
+			height: auto;
 			/* mix-blend-mode: var(--img-mix-blend); */
 			object-fit: cover;
 		}
