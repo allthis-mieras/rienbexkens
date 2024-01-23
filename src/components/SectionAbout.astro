@@ -1,8 +1,21 @@
+---
+// import the Image component and the image
+import { Image } from 'astro:assets'
+import myImage from '../assets/rien-bexkens-marwan-new.png'
+---
+
 <section>
 	<div class="visual">
 		<div class="media-wrapper">
 			<!-- add swiper.js -->
-			<img class="" src="./assets/rien-bexkens-marwan-new.png" alt="Photo by Marwan Magroun" />
+			<Image
+				src={myImage}
+				width={myImage.width / 2}
+				densities={[1.5, 2]}
+				alt="Photo by Marwan Magroun"
+			/>
+
+			<!-- <img class="" src="./assets/rien-bexkens-marwan-new.png" alt="Photo by Marwan Magroun" /> -->
 		</div>
 		<div class="credits">
 			<div class="name">
