@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = 'Rien Bexkens / Rini Tortellini '
 export const SITE_DESCRIPTION =
-	'Rien Bexkens is a Rotterdam-based director, writer and producer of feature films, shorts, documentaries and commercials.'
+	'Rien Bexkens a.k.a. Rini Tortellini is a Rotterdam-based director, writer and producer of feature films, shorts, documentaries and commercials based in Rotterdam.'
 export const NAME_REAL = 'Rien Bexkens'
 export const NAME = 'Rini Tortellini'
 export const TERMS = ''
