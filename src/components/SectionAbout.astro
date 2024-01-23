@@ -48,8 +48,8 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 				productions can also be influenced by cult, French New Wave, absurdism and/or humour noir.
 			</p>
 			<div class="accordion">
-				<a id="hide1" href="#hide1" class="hide">Read More</a>
-				<a id="show1" href="#show1" class="show">Hide</a>
+				<a id="hide1" href="#hide1" class="hide">Read more</a>
+				<a id="show1" href="#show1" class="show">Read less</a>
 				<p class="more">
 					As subject matter, Rien Bexkens is broadly interested in (street-) culture, travel,
 					sports, entrepreneurship and social engagement initiatives. Feeling displaced at times
@@ -199,12 +199,13 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 			font-weight: 600;
 			font-size: var(--font-size-lg);
 			line-height: 90%;
+			letter-spacing: -0.015rem;
 			text-decoration: none;
 		}
 
 		p.lead {
 			font-weight: 700;
-			font-size: var(--font-size-base);
+			font-size: var(--font-size-md);
 			text-wrap: balance;
 			line-height: 112.5%;
 			letter-spacing: var(--ls-tight);
@@ -212,7 +213,7 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 
 		p {
 			margin-bottom: var(--spacer-vw-gap);
-			font-size: var(--font-size-sm);
+			font-size: var(--font-size-base);
 			line-height: 120%;
 			font-family: var(--font-body);
 			letter-spacing: var(--ls-tight);
@@ -223,6 +224,7 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 			display: grid;
 			grid-auto-rows: min-content;
 			gap: calc(var(--spacer-vw-gap));
+			margin-top: 1rem;
 		}
 
 		.heading {
@@ -236,14 +238,18 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 		.accordion {
 			position: relative;
 			transition: all 0.4s linear;
-			padding-bottom: 1rem;
+			padding-bottom: 2rem;
+		}
+
+		.accordion a {
+			font-size: var(--font-size-sm);
 		}
 		.show,
 		.hide {
 			position: absolute;
 			bottom: 0;
 
-			font-size: var(--font-size-xs);
+			font-size: var(--font-size-base);
 		}
 
 		.more,
@@ -285,7 +291,7 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 				padding: calc(0.25 * var(--spacer-vw-padding)) 0;
 			}
 			.details {
-				gap: calc(var(--spacer-vw-gap));
+				gap: calc(0.5 * var(--spacer-vw-gap));
 			}
 
 			.content {
@@ -294,7 +300,9 @@ import myImage from '../assets/rien-bexkens-marwan-new.png'
 
 			li,
 			li a {
+				padding: 0;
 				font-size: var(--font-size-sm);
+				line-height: 112.5%;
 			}
 
 			p.lead {
