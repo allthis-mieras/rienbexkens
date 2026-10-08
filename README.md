@@ -52,3 +52,17 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Deploy
+
+### Branches
+
+| Branch | Deploy | URL |
+|---|---|---|
+| `main` | Productie | https://www.rienbexkens.com |
+| `staging` | Branch deploy (goedgekeurde features, nog niet live) | https://staging--rienbexkens.netlify.app |
+| PR's | Deploy preview | link in de PR |
+
+Features gaan via een PR naar `staging`. Naar `main` alleen gebundelde releases (PR `staging → main`) en hotfixes. Commits met alleen documentatie (`*.md`, `.github/`) starten geen build. Zie `~/Code/_standards/DEPLOY.md`.
+
+Netlify: team All This, site [`rienbexkens`](https://app.netlify.com/projects/rienbexkens).
